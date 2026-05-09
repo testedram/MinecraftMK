@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "api/giphy.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/image.png",
+      "destination": "api/giphy.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "api/giphy.py"
+    }
+  ]
+}
